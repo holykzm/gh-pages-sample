@@ -26,8 +26,9 @@ $(function () {
             names += $(elm).val() + '、';
         })
         names = names.slice(0, -1);
+        var staff = $('input[name="number"]:checked').val();
 
-        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
+        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}\n担当指名：${staff}`;
         sendText(msg);
 
         return false;
