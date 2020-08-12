@@ -36,19 +36,20 @@
 
 
 
-        <p class="mt-3">希望日</p>
+        <h2 class="mt-3">希望日付</h2>
         <input type="text" id="datepicker"maxlength="10"><br>
+        <h2 class="mt-3">希望時間</h2>
         <input type="text" id="timepicker"maxlength="10">
 
 
-        <p class="mt-3">氏名</p>
+        <h2 class="mt-3">名前</h2>
             <input class="form-control w-100 mt-1" name="names" maxlength="10">
 <!--  -->
-        <p class="mt-3">担当指名</p>
-        <p>＊和藤は１０００円<br>スタッフが店舗移動している場合がございます</p>
+        <h2 class="mt-3">担当指名</h2><p>（指名がある場合のみ）</p>
+        <a href="https://beauty.hotpepper.jp/slnH000379158/stylist/" class="btn btn-primary btn-sm">スタイリストのスケジュール</a>
 
 
-        <label class="btn btn-secondary">
+        <label class="btn btn-outline-secondary">
           <input type="radio" name="s-name" value="なし" autocomplete="off" checked>指名なし
         </label>
         <div class="btn-group btn-group-toggle w-100" data-toggle="buttons" name="staff">
@@ -65,17 +66,15 @@
 
 .horizontal_scroll li {margin-right: 5px;}
 
+.btn-outline-secondary:active{
+  background-color: #6c757d;
+}
+
             </style>
           <ul class="horizontal_scroll">
-            <li><!--1 -->
-              <label class="btn btn-secondary">
-                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
-                <input type="radio" name="s-name" value="和藤 正弥" autocomplete="off">＊和藤
-              </label>
 
-            </li>
             <li><!-- 2-->
-              <label class="btn btn-secondary">
+              <label class="btn btn-outline-secondary">
                 <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="藤田 和也" autocomplete="off">藤田 和也
               </label>
@@ -83,30 +82,24 @@
             </li>
             <li><!-- 3-->
 
-              <label class="btn btn-secondary">
-                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
+              <label class="btn btn-outline-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/65/B104889965/B104889965_164-219.jpg">
                 <input type="radio" name="s-name" value="吉田 桃子" autocomplete="off">吉田 桃子
               </label>
 
             </li>
-            <li><!-- 4-->
 
-              <label class="btn btn-secondary">
-                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
-                <input type="radio" name="s-name" value="川西 真希" autocomplete="off">川西 真希
-              </label>
-            </li>
             <li><!-- 5-->
 
-              <label class="btn btn-secondary">
-                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
+              <label class="btn btn-outline-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/00/11/B104890011/B104890011_164-219.jpg">
                 <input type="radio" name="s-name" value="横井 一真" autocomplete="off">横井 一真
               </label>
             </li>
             <li><!-- 6-->
 
-              <label class="btn btn-secondary">
-                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
+              <label class="btn btn-outline-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/00/23/B104890023/B104890023_164-219.jpg">
                 <input type="radio" name="s-name" value="濱 征子" autocomplete="off">濱 征子
               </label>
 
@@ -116,7 +109,7 @@
         </div>
 
 <!--  -->
-        <p class="mt-3">メニュー<br>相談がある場合などは『概要』に入力できます</p>
+        <h2 class="mt-3">メニュー</h2><br><p>相談がある場合などは『概要』に入力できます</p>
 
             <label class="btn btn-secondary">
                 <input type="checkbox" name="menu" value="カット" autocomplete="off">カット
@@ -139,14 +132,30 @@
             <label class="btn btn-secondary">
                 <input type="checkbox" name="menu" value="ポイントストレート" autocomplete="off">ポイントストレート
             </label>
+
             <label class="btn btn-secondary">
-                <input type="checkbox" name="menu" value="キューティクルベール" autocomplete="off">トリートメント
+                <input type="checkbox" name="menu" value="キューティクルベール" autocomplete="off">トリートメント１
+                <p>表面コーティング １０００円</p>
             </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="menu" value="スタイルキープ" autocomplete="off">トリートメント２
+                <p>内部補修 ３０００円</p>
+              </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="menu" value="オールケア" autocomplete="off">トリートメント３
+                <p>表面＋内部ケア ４０００円</p>
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="menu" value="オールケア" autocomplete="off">トリートメント４
+                <p>髪質改善・修復ケア ８８００円<br>初回『60日以内で2回目無料！』</p>
+            </label>
+
+
 
         <p class="mt-3">概要</p>
         <div>
-            <input type="text" class="form-control w-100 mt-1" name="memo" maxlength="10">
-        </div>
+          <textarea name="memo" cols="30" rows="10" placeholder="例：子供も同じ時間で予約できますか？"></textarea>
+            </div>
 
         <br>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">

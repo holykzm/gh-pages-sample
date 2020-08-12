@@ -3,11 +3,16 @@ $(function () {
     $(function () {
       //デートピッカー用スクリプト
       $("#datepicker").pickadate({
-      format: "yyyy年mm月dd日"
+      format: "mm月dd日"
+      // 良福寺なら１だけ
+      disable: [1,7]
       });
       //タイムピッカー用スクリプト
       $("#timepicker").pickatime({
-      format: "HH:i"
+      format: "HH:i",
+      interval: 30, //時間間隔（分で指定）
+      min: [10,00], //最小時間
+      max: [20,00] //最大時間
       });
     });
 
