@@ -20,7 +20,9 @@ $(function () {
     // 送信
     $('form').submit(function () {
         var date = $('input[name="date"]').val();
-        var number = $('input[name="number"]:checked').val();
+        var date2 = $('input[name="date2"]').val();
+        var date3 = $('input[name="date3"]').val();
+        var number = $('input[name="number"]:').val();
         var names = '';
         $('#form-name').children().each(function (i, elm) {
             names += $(elm).val() + '、';
@@ -31,7 +33,7 @@ $(function () {
         var memo = $('input[name="memo"]').val();
 
 
-        var msg = `希望日：${date}\n人数：${number}人\n氏名：${names}様\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
+        var msg = `希望日：${date}\n第２希望：${date2}\n第３希望：${date3}\n人数：${number}人\n氏名：${names}様\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
         sendText(msg);
 
         return false;
