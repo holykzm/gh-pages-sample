@@ -27,7 +27,7 @@ $(function () {
         })
         names = names.slice(0, -1);
         var staff = $('input[name="s-name"]:checked').val();
-        var menu = $('input[name="menu"]').val();
+        var menu = $('input[name="menu"]:checked').val();
         var memo = $('input[name="memo"]').val();
 
 
