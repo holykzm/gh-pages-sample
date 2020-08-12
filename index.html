@@ -48,57 +48,69 @@
 <!--  -->
         <p class="mt-3">担当指名</p>
         <p>＊和藤は１０００円<br>スタッフが店舗移動している場合がございます</p>
+
         <div　class="btn-group btn-group-toggle w-100" data-toggle="buttons" name="staff">
 
-<style media="screen">
-.horizontal_scroll {
-overflow-x: scroll;
--webkit-overflow-scrolling: touch;
-padding: 0 0 12px 8px;
-display: -ms-flexbox;
-display: flex; }
-</style>
+          <style media="screen">
+          .none{
+            display: none;
+          }
+
+          .horizontal_scroll {
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 0 12px 8px;
+            display: -ms-flexbox;
+            display: flex; }
+            </style>
+
+
+<div class="none">
+  <label class="btn btn-secondary">
+    <input type="radio" name="s-name" value="なし" autocomplete="off" checked>
+  </label>
+</div>
           <ul class="horizontal_scroll">
             <li><!--1 -->
-              <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
               <label class="btn btn-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="和藤 正弥" autocomplete="off">＊和藤
               </label>
 
             </li>
             <li><!-- 2-->
-<img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
               <label class="btn btn-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="藤田 和也" autocomplete="off">藤田 和也
               </label>
 
             </li>
             <li><!-- 3-->
 
-              <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
               <label class="btn btn-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="吉田 桃子" autocomplete="off">吉田 桃子
               </label>
 
             </li>
             <li><!-- 4-->
 
-<img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
               <label class="btn btn-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="川西 真希" autocomplete="off">川西 真希
               </label>
             </li>
             <li><!-- 5-->
 
-<img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
               <label class="btn btn-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="横井 一真" autocomplete="off">横井 一真
               </label>
             </li>
             <li><!-- 6-->
 
-<img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
               <label class="btn btn-secondary">
+                <img src="https://imgbp.hotp.jp/CSP/IMG_SRC/99/57/B104889957/B104889957_164-219.jpg">
                 <input type="radio" name="s-name" value="濱 征子" autocomplete="off">濱 征子
               </label>
 
@@ -112,25 +124,34 @@ display: flex; }
         <p class="mt-3">メニュー<br>相談がある場合などは『概要』に入力できます</p>
         <div　class="btn-group btn-group-toggle w-100" data-toggle="buttons" name="staff">
             <label class="btn btn-secondary">
-                <input type="radio" name="s-name" value="1" autocomplete="off">カット
+                <input type="checkbox" name="s-name" value="カット" autocomplete="off">カット
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="s-name" value="2" autocomplete="off">カット＋眉カット
+                <input type="checkbox" name="s-name" value="カット＋眉" autocomplete="off">カット＋眉カット
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="s-name" value="3" autocomplete="off">カラー（鎖骨以上はロング料金あり）
+                <input type="checkbox" name="s-name" value="カラー" autocomplete="off">カラー（鎖骨以上はロング料金あり）
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="s-name" value="4" autocomplete="off">パーマ
+                <input type="checkbox" name="s-name" value="パーマ" autocomplete="off">パーマ
             </label>
             <label class="btn btn-secondary">
-                <input type="radio" name="s-name" value="5" autocomplete="off">ストレート
+              <input type="checkbox" name="s-name" value="ポイントパーマ" autocomplete="off">ポイントパーマ
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="s-name" value="ストレート" autocomplete="off">ストレート
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="s-name" value="ポイントストレート" autocomplete="off">ポイントストレート
+            </label>
+            <label class="btn btn-secondary">
+                <input type="checkbox" name="s-name" value="キューティクルベール" autocomplete="off">トリートメント
             </label>
         </div>
 
         <p class="mt-3">概要</p>
         <div>
-            <input class="form-control w-100 mt-1" name="memo" maxlength="10">
+            <input　type="text" class="form-control w-100 mt-1" name="memo" maxlength="10">
         </div>
 
         <br>
