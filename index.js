@@ -2,7 +2,7 @@ $(function () {
     // カレンダー
     $(function () {
         $('input[name="date"]').datepicker({
-            dateFormat: 'yy/mm/dd HH:mm',
+            dateFormat: 'yy/mm/dd hh:mm',
             language:'ja',
         });
     });
