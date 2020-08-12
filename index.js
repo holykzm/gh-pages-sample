@@ -22,7 +22,7 @@ $(function () {
         var date = $('input[name="date"]').val();
         var names = $('input[name="names"]').val();
         var staff = $('input[name="s-name"]:checked').val();
-        var menu = $('input[name="menu"]:checked').val();
+        var menu = $('input[name="menu"]').val();
         var memo = $('input[name="memo"]').val();
 
 
