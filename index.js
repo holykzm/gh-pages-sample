@@ -27,8 +27,10 @@ $(function () {
         })
         names = names.slice(0, -1);
         var staff = $('input[name="s-name"]:checked').val();
+        var memo = '';
 
-        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}\n担当指名：${staff}`;
+
+        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}\n担当指名：${staff}\n概要：${memo}`;
         sendText(msg);
 
         return false;
