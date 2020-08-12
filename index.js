@@ -26,7 +26,7 @@ $(function () {
             names += $(elm).val() + '、';
         })
         names = names.slice(0, -1);
-        var staff = $('input[name="s-name"]:checked').val();
+        var staff = $('input[name="s-name"]:checked');
         var memo = '';
 
 
