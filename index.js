@@ -31,7 +31,7 @@ $(function () {
         var memo = $('input[name="moemo"]');
 
 
-        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}`;
+        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
         sendText(msg);
 
         return false;
