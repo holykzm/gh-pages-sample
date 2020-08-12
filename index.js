@@ -3,7 +3,7 @@ $(function () {
     $(function () {
       //デートピッカー用スクリプト
       $("#datepicker").pickadate({
-      format: "mm月dd日",
+      format: "yyyy年mm月dd日",
       // 良福寺なら１だけ
       disable: [1,7]
       });
@@ -27,7 +27,7 @@ $(function () {
           return $(this).val();
         }).get();
 
-        var memo = $('#memo').val();
+        var memo = $('input[name="memo"]').val();
 
 
         var msg = `希望日：${date}\n時間：${time}\n\n氏名：${names}様\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
