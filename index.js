@@ -1,16 +1,20 @@
 $(function () {
     // カレンダー
     $(function () {
-      $('#datetime').datetimepicker({
-        format:'m/d H:i',
-        inline:true,
-        lang:'ja'
-        });
+      //デートピッカー用スクリプト
+      $("#datepicker").pickadate({
+      format: "yyyy年mm月dd日"
+      });
+      //タイムピッカー用スクリプト
+      $("#timepicker").pickatime({
+      format: "HH:i"
+      });
     });
 
     // 送信
     $('form').submit(function () {
-        var date = $('#datetime').val();
+        var date = $('#datepicker').val();
+        var time = $('#timepicker').val();
         var names = $('input[name="names"]').val();
         var staff = $('input[name="s-name"]:checked').val();
 
@@ -21,7 +25,7 @@ $(function () {
         var memo = $('input[name="memo"]').val();
 
 
-        var msg = `希望日：${date}\n氏名：${names}様\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
+        var msg = `希望日：${date}\n時間：${time}\n\n氏名：${names}様\n担当指名：${staff}\nメニュー：${menu}\n概要：${memo}\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
         sendText(msg);
 
         return false;
