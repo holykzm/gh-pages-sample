@@ -3,7 +3,7 @@ $(function () {
     $(function () {
       //デートピッカー用スクリプト
       $("#datepicker").pickadate({
-      format: "mm月dd日"
+      format: "mm月dd日",
       // 良福寺なら１だけ
       disable: [1,7]
       });
