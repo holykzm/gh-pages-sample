@@ -23,29 +23,71 @@
         <!-- 日本語化対応 -->
         <script src="ja_JP.js"></script>
         <!--  -->
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+  <style media="screen">
 
+  .horizontal_scroll {
+    list-style: none;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 0 12px 8px;
+    display: -ms-flexbox;
+    display: flex; }
+
+.horizontal_scroll li {margin-right: 5px;}
+
+
+h2 {
+  padding: 0.5em;/*文字周りの余白*/
+  color: #28a745;/*文字色*/
+  
+  border-top: dashed 3px #28a745;/*下線*/
+}
+
+
+
+
+.box {
+margin-top: 20px;
+}
+    </style>
 
     <form class="mx-2 px-2">
 
         <p class="mt-3">以下に予約情報を入力して送信ボタンを押してください♪</p>
+        <hr>
 
 
-
+<div class="box">
+  
         <h2 class="mt-3">希望日付</h2>
         <p>定休日：月曜日（コロナの配慮で日曜日は良福寺店の営業になります）</p>
         <input type="text" id="datepicker"maxlength="10"><br>
+</div>
+
+<!--  -->
+
+<div class="box">
+  
         <h2 class="mt-3">希望時間</h2>
         <input type="text" id="timepicker"maxlength="10">
+</div>
 
-
-        <h2 class="mt-3">名前</h2>
-            <input class="form-control w-100 mt-1" name="names" maxlength="10">
 <!--  -->
+
+<div class="box">
+        <h2 class="mt-3">お名前</h2>
+            <input class="form-control w-100 mt-1" name="names" maxlength="10">
+</div>
+<!--  -->
+
+<div class="box">
+  
         <h2 class="mt-3">担当指名</h2><p>（指名がある場合のみ）</p>
         <a href="https://beauty.hotpepper.jp/slnH000379158/stylist/" class="btn btn-primary btn-sm mb-2">スタイリストのスケジュールを見る</a><br>
 
@@ -55,23 +97,7 @@
         </label>
         <div class="btn-group btn-group-toggle w-100" data-toggle="buttons" name="staff">
 
-          <style media="screen">
 
-          .horizontal_scroll {
-            list-style: none;
-            overflow-x: scroll;
-            -webkit-overflow-scrolling: touch;
-            padding: 0 0 12px 8px;
-            display: -ms-flexbox;
-            display: flex; }
-
-.horizontal_scroll li {margin-right: 5px;}
-
-.btn-outline-secondary:active{
-  background-color: #6c757d;
-}
-
-            </style>
           <ul class="horizontal_scroll">
 
             <li><!-- 2-->
@@ -109,8 +135,13 @@
 
         </div>
 
+</div>
 <!--  -->
-        <h2 class="mt-3">メニュー</h2><br><p>相談がある場合などは『概要』に入力できます</p>
+
+<div class="box">
+  
+        <h2 class="mt-3">メニュー</h2><br><p>相談がある場合などは『概要』に入力できます。<br><br>
+        <strong>複数選択できます</strong><br>カット＋眉カットがしたい場合は両方を選択♪</p>
 
         
         <style media="screen">
@@ -137,50 +168,110 @@
     background-color: #6c757d;
 }
 .p-3{width: 100%;}
+
+/* ============================ */
+.my-checkbox {
+  display: block;
+  position: relative;
+  margin: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+}
+.my-checkbox input{
+  display:none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0; /* 上からの位置 */
+  left: 0;
+  height: auto; /* 幅 */
+  width: 100%; /* 幅 */
+  border: solid 2px #d4dae2; /* 線 */
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-left:8px;
+}
+
+
+/* チェックが入ったとき */
+.my-checkbox {
+  input:checked + .checkmark {
+    background-color: #ea809b; /* チェック時の色 */
+    border-color: #d6496d; /* チェック時の色 */
+    color:#464646;
+    
+  }
+}
 </style>
-        
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="カット" autocomplete="off">カット
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="カット＋眉" autocomplete="off">カット＋眉カット
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="カラー" autocomplete="off">カラー（鎖骨以上はロング料金あり）
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="パーマ" autocomplete="off">パーマ
-            </label>
-            <label class="btnn btnn-style">
-              <input type="checkbox" name="menu" value="ポイントパーマ" autocomplete="off">ポイントパーマ
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="ストレート" autocomplete="off">ストレート
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="ポイントストレート" autocomplete="off">ポイントストレート
-            </label>
 
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="キューティクルベール" autocomplete="off">トリートメント１
-                <p>表面コーティング １０００円</p>
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="スタイルキープ" autocomplete="off">トリートメント２
-                <p>内部補修 ３０００円</p>
-              </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="オールケア" autocomplete="off">トリートメント３
-                <p>表面＋内部ケア ４０００円</p>
-            </label>
-            <label class="btnn btnn-style">
-                <input type="checkbox" name="menu" value="オールケア" autocomplete="off">トリートメント４
-                <p>髪質改善・修復ケア ８８００円<br>初回『60日以内で2回目無料！』</p>
-            </label>
+<label class="my-checkbox" for="men1u">
+  <input id="menu1" type="checkbox" name="menu" value="カット" autocomplete="off">
+   <span class="checkmark"><strong>カット</strong>￥２２００</span>
+</label>
+<br>
+
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="前髪カット" autocomplete="off">
+   <span class="checkmark"><strong>前髪カット</strong>￥５５０</span>
+</label>
+<br>
+
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="眉カット" autocomplete="off">
+   <span class="checkmark"><strong>眉カット</strong>￥５５０</span>
+</label>
+<br>
+
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="カラー" autocomplete="off">
+   <span class="checkmark"><strong>カラー</strong>￥４４００</span>
+
+</label>
+<br>
 
 
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="ダブルカラー" autocomplete="off">
+   <span class="checkmark"><strong>ダブルカラー</strong>￥８８００</span>
+</label>
+<br>
 
-        <p class="mt-3">概要</p>
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="パーマ" autocomplete="off">
+   <span class="checkmark"><strong>パーマ(カットなし)</strong></strong>￥</span>
+</label>
+<br>
+
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="縮毛矯正" autocomplete="off">
+   <span class="checkmark"><strong>縮毛矯正(カットなし)</strong>￥１８０００</span>
+</label>
+<br>
+
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="キューティクルベール" autocomplete="off">
+   <span class="checkmark"><strong>トリートメント</strong>￥１１００</span>
+</label>
+<br>
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="スタイルキープ" autocomplete="off">
+   <span class="checkmark"><strong>トリートメント</strong>￥３３００</span>
+</label>
+<br>
+<label class="my-checkbox">
+  <input type="checkbox" name="menu" value="オールケア" autocomplete="off">
+   <span class="checkmark"><strong>トリートメント</strong>￥４４００</span>
+</label>
+<br><br>
+
+</div>
+<!--  -->
+
+
+        <h2 class="mt-3">概要</h2>
         <div>
           <input class="form-control w-100 mt-1" name="memo" maxlength="10" placeholder="例)子供も同じ時間で予約できますか？">
             </div>
@@ -198,3 +289,5 @@
 </body>
 
 </html>
+
+
