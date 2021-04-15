@@ -27,6 +27,7 @@ $(function () {
     $('form').submit(function () {
         var date = $('#datepicker').val();
         var time = $('#timepicker').val();
+        var time2 = $('#timepicker2').val();
         var names = $('input[name="names"]').val();
         var staff = $('input[name="s-name"]:checked').val();
 
