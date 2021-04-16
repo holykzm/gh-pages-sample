@@ -82,6 +82,40 @@ br.mini-br {
     display:block;
   }
   }
+  
+    .accordion-check{
+    display: none;
+  }
+  .accordion-label{
+    background: #999999;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 1px;
+    padding: 10px 20px;
+  }
+  
+  .accordion-content{
+    border-radius: 10px;
+    height: 0;
+    opacity: 0;
+    padding: 10px;
+    transition: .5s;
+    visibility: hidden;
+  }
+  .accordion-check:checked + .accordion-label + .accordion-content{
+    margin: 10px 0px;
+    height: 100%;
+    opacity: 1;
+    padding: 10px;
+    visibility: visible;
+    border: 2px solid #b8b8b8;
+  }
+  
+  .sub-box h2 {
+    border-top: none;
+    padding: 0px;
+  }
 </style>
 
     <form class="mx-2 px-2">
@@ -90,25 +124,75 @@ br.mini-br {
         <hr>
 
 
-<div class="box">
-
-        <h2 class="mt-3">希望日付</h2>
-        <p>定休日：月曜日（コロナの配慮で日曜日は良福寺店の営業になります）</p>
-        <input class="form-control" type="text" id="datepicker"maxlength="10" placeholder="日付を選ぶ"><br>
-</div>
-
-<!--  -->
-
-<div class="box time-picker-orign">
-<h2 class="mt-3">ご希望の時間</h2>
-    <p class="mini-h2">選択したお時間の間でご案内できるか確認・提案させていただきます。</p>
-        <input class="form-control" type="text" id="timepicker"maxlength="10" placeholder="時間を選ぶ">
-        <span>から</span>
-        <input class="form-control" type="text" id="timepicker2"maxlength="10" placeholder="時間を選ぶ">
-        <span>までの間</span>
-</div>
-
-<!--  -->
+        <!-- 候補１ -->
+        <div class="box">
+        <h2 class="mt-3">ご希望の日付</h2>
+                <p>定休日：日曜日・不定休</p>
+                <input class="form-control" type="text" id="datepicker"maxlength="10" placeholder="日付を選ぶ"><br>
+        </div>
+        
+        <!--  -->
+        
+        <div class="box time-picker-orign">
+        <h2 class="mt-3">ご希望の時間</h2>
+            <p class="mini-h2">選択したお時間の間でご案内できるか確認・提案させていただきます。</p>
+                <input class="form-control" type="text" id="timepicker"maxlength="10" placeholder="時間を選ぶ">
+                <span>から</span>
+                <input class="form-control" type="text" id="timepicker2"maxlength="10" placeholder="時間を選ぶ">
+                <span>までの間</span>
+        </div>
+        
+        <!-- /候補１ -->
+        <br>
+        <!-- 候補２～３ -->
+        <input id="accordion-check1" class="accordion-check" type="checkbox">
+        <label class="accordion-label" for="accordion-check1">第２希望を追加する</label>
+        <div class="accordion-content">
+        
+          <div class="box sub-box">
+          <h2 class="mt-3">第２希望の日付</h2>
+                  <p>定休日：日曜日・不定休</p>
+                  <input class="form-control" type="text" id="datepicker2"maxlength="10" placeholder="日付を選ぶ">
+          </div>
+        
+          <!--  -->
+        
+          <div class="box sub-box time-picker-orign">
+          <h2 class="mt-3">第２希望の時間</h2>
+                  <input class="form-control" type="text" id="timepicker2-1"maxlength="10" placeholder="時間を選ぶ">
+                  <span>から</span>
+                  <input class="form-control" type="text" id="timepicker2-2"maxlength="10" placeholder="時間を選ぶ">
+                  <span>までの間</span>
+          </div>
+        
+        
+        </div>
+        
+        <!--  -->
+        
+        <input id="accordion-check2" class="accordion-check" type="checkbox">
+        <label class="accordion-label" for="accordion-check2">第３希望を追加する</label>
+        <div class="accordion-content">
+        
+          <div class="box sub-box">
+          <h2 class="mt-3">第３希望の日付</h2>
+                  <p>定休日：日曜日・不定休</p>
+                  <input class="form-control" type="text" id="datepicker3"maxlength="10" placeholder="日付を選ぶ">
+          </div>
+        
+          <!--  -->
+        
+          <div class="box sub-box time-picker-orign">
+          <h2 class="mt-3">第３希望の時間</h2>
+                  <input class="form-control" type="text" id="timepicker3-1"maxlength="10" placeholder="時間を選ぶ">
+                  <span>から</span>
+                  <input class="form-control" type="text" id="timepicker3-2"maxlength="10" placeholder="時間を選ぶ">
+                  <span>までの間</span>
+          </div>
+        
+        </div>
+        
+        <!-- /候補２～３ -->
 
 <div class="box">
         <h2 class="mt-3">お名前</h2>
@@ -232,6 +316,8 @@ border: #636363 solid 2px;
 font-size: 25px;
 font-weight: bold;
   }
+
+  
 </style>
 <label class="my-checkbox">
   <input type="checkbox" name="menu" value="カット" autocomplete="off">
