@@ -78,7 +78,8 @@ $(function () {
         var date3 = $('#datepicker3').val();
         var time31 = $('#timepicker3-1').val();
         var time32 = $('#timepicker2-2').val();
-        
+        var staff = $('input[name="s-name"]:checked').val();
+
         var names = $('input[name="names"]').val();
 
         var menu = $('input[name="menu"]:checked').map(function(){
@@ -88,7 +89,7 @@ $(function () {
         var memo = $('input[name="memo"]').val();
 
 
-        var msg = `希望日：${date}\n\n時間：${time}～${time2}までの間\n\n（第２希望）\n ${date2}\n${time21}～${time22}までの間\n\n（第３希望）\n${date3}\n${time31}～${time32}までの間\n\n氏名：${names}様\n\nメニュー：${menu}\n\n概要：${memo}\n\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
+        var msg = `希望日：${date}\n\n時間：${time}～${time2}までの間\n\n（第２希望）\n ${date2}\n${time21}～${time22}までの間\n\n（第３希望）\n${date3}\n${time31}～${time32}までの間\n\n氏名：${names}様\n\n 担当指名：${staff}\n\nメニュー：${menu}\n\n概要：${memo}\n\n\n送信ありがとうございます！\n返信が来るまでしばらくお待ちください♪`;
         sendText(msg);
 
         return false;
