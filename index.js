@@ -76,8 +76,6 @@ $(function () {
         var time21 = $('#timepicker2-1').val();
         var time22 = $('#timepicker2-2').val();
         
-         var firstChoice = `\n\n（第２希望）\n${date}\n${time21}〜${time22}までの間`;
-        
         var date3 = $('#datepicker3').val();
         var time31 = $('#timepicker3-1').val();
         var time32 = $('#timepicker2-2').val();
