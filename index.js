@@ -12,14 +12,14 @@ $(function () {
       format: "HH:i",
       interval: 30, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [18,30] //最大時間
       });
       //タイムピッカー用スクリプト2
       $("#timepicker2").pickatime({
       format: "HH:i",
       interval: 30, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [18,30] //最大時間
       });
       //デートピッカー2
       $("#datepicker2").pickadate({
@@ -32,14 +32,14 @@ $(function () {
       format: "HH:i",
       interval: 30, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [18,30] //最大時間
       });
       //タイムピッカー2-2
       $("#timepicker2-2").pickatime({
       format: "HH:i",
       interval: 30, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [18,30] //最大時間
       });
       //デートピッカー2
       $("#datepicker3").pickadate({
@@ -52,14 +52,14 @@ $(function () {
       format: "HH:i",
       interval: 30, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [18,30] //最大時間
       });
       //タイムピッカー3-2
       $("#timepicker3-2").pickatime({
       format: "HH:i",
       interval: 30, //時間間隔（分で指定）
       min: [10,00], //最小時間
-      max: [20,00] //最大時間
+      max: [18,30] //最大時間
       });
 
     });
