@@ -76,7 +76,7 @@ $(function () {
         var time21 = $('#timepicker2-1').val();
         var time22 = $('#timepicker2-2').val();
         
-        var asasas = `${date2} ${time21} 〜~ ${time22}`;
+        var asasas = $date2+$time21 +$time22;
         
         var date3 = $('#datepicker3').val();
         var time31 = $('#timepicker3-1').val();
